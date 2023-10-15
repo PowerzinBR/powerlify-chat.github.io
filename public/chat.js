@@ -3,14 +3,17 @@ const socket = io();
 
 let username = localStorage.getItem('username');
 
+document.getElementById('messageForm').addEventListener('submit', function(event) {
+  event.preventDefault();  // Evita a submissão padrão do formulário
+  sendMessage();
+});
+
 function sendMessage() {
   const message = document.getElementById('messageInput').value;
   if (message.trim() !== '') {
     socket.emit('chat message', { username, message });
     document.getElementById('messageInput').value = '';
-    return false;  // Retorna false apenas se a mensagem for enviada
   }
-  return true;  // Retorna true se a mensagem estiver vazia
 }
 
 
