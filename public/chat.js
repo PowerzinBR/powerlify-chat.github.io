@@ -1,3 +1,4 @@
+const io = require('socket.io')
 const socket = io();
 
 let username = localStorage.getItem('username');
