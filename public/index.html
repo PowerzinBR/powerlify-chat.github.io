@@ -29,18 +29,5 @@
   <script src="/socket.io/socket.io.js"></script>
   <script src="chat.js"></script>
 
-  <script>
-    // Função para redirecionar para profile.html se o nome do usuário não estiver definido
-    function redirectToProfile() {
-      const username = localStorage.getItem('username');
-      if (!username) {
-        alert('Por favor, defina um nome de usuário no profile.html.');
-        window.location.href = 'profile.html';
-      }
-    }
-
-    // Redirecionar ao entrar na página
-    redirectToProfile();
-  </script>
 </body>
 </html>
