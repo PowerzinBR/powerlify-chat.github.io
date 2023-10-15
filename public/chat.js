@@ -8,8 +8,11 @@ function sendMessage() {
   if (message.trim() !== '') {
     socket.emit('chat message', { username, message });
     document.getElementById('messageInput').value = '';
+    return false;  // Retorna false apenas se a mensagem for enviada
   }
+  return true;  // Retorna true se a mensagem estiver vazia
 }
+
 
 socket.on('chat message', (data) => {
   const ul = document.getElementById('messages');
