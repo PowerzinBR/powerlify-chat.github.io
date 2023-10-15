@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Real-Time Chat - Perfil</title>
+  <link rel="stylesheet" type="text/css" href="profile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="profile-container">
+      <h1>Criar Perfil</h1>
+      <form id="profileForm" onsubmit="createProfile(); return false;">
+        <label for="usernameInput">Nome de Usuário:</label>
+        <input id="usernameInput" placeholder="Seu nome de usuário" required>
+
+        <label for="statusInput">Status:</label>
+        <select id="statusInput">
+          <option value="online">Online</option>
+          <option value="offline">Offline</option>
+        </select>
+
+        <label for="profilePictureInput">Foto de Perfil:</label>
+        <input type="file" id="profilePictureInput" accept="image/*">
+
+        <button type="submit">Criar Perfil</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>
